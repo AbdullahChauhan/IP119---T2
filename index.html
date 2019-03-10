@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>IP119 - T2 - Clone</title>
+        <link rel="stylesheet" href="https://use.typekit.net/vsb7hzg.css">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/css/flag-icon.css" />
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="nav-container">
+                <div class="logo-box">
+                    <a href=""
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 191.9 45.9"
+                        >
+                            <path
+                                d="M47.4 21.4L41.5 18c-1.2-.7-2.1-1.7-2.8-2.8-.6-1.1-1-2.4-1-3.8V8.1c-1.6-1.4-3.3-2.6-5.3-3.5v6.9c0 2.3.6 4.5 1.7 6.4 1.1 1.9 2.7 3.5 4.7 4.7l8.4 4.9c.2-1.1.2-2.2.2-3.3.1-1 .1-1.9 0-2.8"
+                            ></path>
+                            <path
+                                d="M31.9 19.2c-1.3-2.3-2.1-4.9-2.1-7.7V.9C28.1.4 26.4.1 24.5 0v11.5c0 3.8 1 7.3 2.8 10.4 1.8 3.1 4.3 5.7 7.6 7.6l7.6 4.4c.8-1.6 1.4-3.3 1.8-5L37.5 25c-2.4-1.5-4.3-3.5-5.6-5.8m-24 3.4c2-1.2 3.6-2.8 4.7-4.7 1.1-1.9 1.7-4.1 1.7-6.4V1.8c-1.9.8-3.7 1.8-5.3 3v6.8c0 1.4-.4 2.7-1 3.8-.6 1.1-1.6 2.1-2.8 2.8l-2.9 1.7c-.3 1.4-.4 2.9-.4 4.4 0 .6 0 1.3.1 1.9l5.9-3.6z"
+                            ></path>
+                            <path
+                                d="M19.4 21.8c1.8-3.1 2.8-6.6 2.8-10.4V2.6c-1.8.1-3.6.4-5.3 1v7.9c0 2.8-.8 5.5-2.1 7.7-1.3 2.3-3.2 4.3-5.7 5.7L0 30.2c.5 1.7 1.1 3.4 1.9 5l9.9-5.7c3.3-2 5.8-4.6 7.6-7.7m4 14.8c-2.2 0-4.4.6-6.4 1.7l-8.4 4.9c1.6 1.2 3.3 2.3 5.2 3.1l5.9-3.4c1.2-.7 2.5-1 3.8-1 1.3 0 2.6.3 3.8 1l2.9 1.7c2-.7 3.9-1.6 5.6-2.8l-5.9-3.4c-2.1-1.3-4.3-1.8-6.5-1.8"
+                            ></path>
+                            <path
+                                d="M33.7 31.5c-3.3-1.9-6.8-2.8-10.4-2.8-3.5 0-7.1.9-10.4 2.8l-7.7 4.4c1 1.5 2.1 2.9 3.5 4.1l6.8-3.9c2.4-1.4 5.1-2.1 7.7-2.1 2.6 0 5.3.7 7.7 2.1l9.2 5.3c1.3-1.2 2.4-2.6 3.4-4.1l-9.8-5.8zm99.6-8.5c-.3-.1-.8-.3-1.3-.5s-1.1-.4-1.5-.6c-.9-.4-1.7-.7-1.7-1.6 0-1.2 1.5-1.4 2.1-1.4 1.3 0 2.9.3 4.3 1.4l2.2-3.7c-1.9-1.3-4.2-1.9-6.4-1.9-2.1 0-4 .6-5.2 1.6-.8.6-2.1 2.1-2.1 4.4 0 1.6.5 2.9 1.6 3.9.7.7 1.6 1.1 2.1 1.3.1 0 .2.1.2.1.5.2 1.3.5 2.1.8.3.1.5.2.8.3 1 .4 2 .8 2 1.7 0 1.2-1.2 1.6-2.4 1.6-1.4 0-3.5-.5-5.4-1.9l-2.2 3.8c1.5 1 4.2 2.4 7.5 2.4 2.2 0 3.9-.5 5.3-1.6 1.5-1.2 2.3-2.9 2.3-4.7 0-1.5-.5-2.8-1.6-3.8-.6-.7-1.5-1.2-2.7-1.6m6.4-3.8h4.9v15.3h5V19.2h4.9V15h-14.8zm22.2 7.3h7.3v-4.1h-7.3v-3.2h7.8V15h-12.8v19.5h13v-4.3h-8zm26.2-9.1c-1.2-1.1-3.5-2.3-7.4-2.3H174v19.4h6.7c3.9 0 6.2-1.3 7.4-2.3 2.1-1.8 3.2-4.3 3.2-7.4-.1-3.2-1.1-5.7-3.2-7.4m-3.5 11.5c-.8.8-2.2 1.3-3.7 1.3H179v-11h1.9c2.1 0 3.2.8 3.7 1.2 1 1 1.6 2.6 1.6 4.3-.1 1.8-.6 3.3-1.6 4.2M72.9 24.2c1.5-.8 2.4-2.2 2.4-3.9 0-1.8-.6-3.1-2-4.1-1.1-.8-2.7-1.2-4.6-1.2H61v19.4h8c2.1 0 3.8-.4 5-1.3 1.5-1.1 2.2-2.5 2.2-4.4 0-2.1-1.2-3.7-3.3-4.5m-6.9-5h1.8c1.8 0 2.6.7 2.6 1.7s-.6 1.7-2.6 1.7H66v-3.4zm2.1 11H66v-3.9h2.1c1.9 0 3 .8 3 1.9 0 1.3-1 2-3 2m20.6-15.6c-5.6 0-10.1 4.5-10.1 10.1s4.5 10.1 10.1 10.1 10.1-4.5 10.1-10.1c0-5.5-4.5-10.1-10.1-10.1m0 15.6c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5 5.5 2.5 5.5 5.5c0 3.1-2.5 5.5-5.5 5.5m22.6-15.6c-5.6 0-10.1 4.5-10.1 10.1s4.5 10.1 10.1 10.1 10.1-4.5 10.1-10.1-4.5-10.1-10.1-10.1m0 15.6c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5 5.5 2.5 5.5 5.5c0 3.1-2.4 5.5-5.5 5.5"
+                            ></path></svg></a>
+                </div>
+                <nav class="nav-links">
+                    <li><a href="#" class="link">Boards</a></li>
+                    <li><a href="#" class="link">Accessories</a></li>
+                    <li><a href="#" class="link">Community</a></li>
+                    <li><a href="#" class="link">Support</a></li>
+                </nav>
+                <div class="shopping-box">
+                    <div class="shopping-items-count">
+                        <p class="count">0</p>
+                    </div>
+                    <a href="#" class="shopping-cart-icon"
+                        ><i class="fas fa-shopping-cart"></i
+                    ></a>
+                </div>
+                <a href="#" class="btn shop-now-btn">Shop now</a>
+                <div class="nav-hamburger-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="nav-links-mobile">
+                    <ul>
+                        <li><a href="#" class="link">Boards</a></li>
+                        <li><a href="#" class="link">Accessories</a></li>
+                        <li><a href="#" class="link">Community</a></li>
+                        <li><a href="#" class="link">Support</a></li>
+                        <li><a href="#" class="link">Company</a></li>
+                        <li><a href="#" class="link">Explore</a></li>
+                        <li><a href="#" class="link">Orders</a></li>
+                        <li><a href="#" class="link">Social</a></li>
+                        <li class="social-icons">
+                            <a href="#"
+                                ><i class="fab fa-facebook-square"></i></a
+                            ><a href="#"
+                                ><i class="fab fa-twitter-square"></i></a
+                            ><a href="#"
+                                ><i class="fab fa-youtube-square"></i></a
+                            ><a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="change-country">
+                            <a href="#"
+                                ><i class="flag-icon flag-icon-um"></i> Need to
+                                change your shipping country?</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-banner">
+                <div class="box-center">
+                    <img src="./images/main-text.svg" alt="" />
+                    <a href="#" class="btn shop-now-btn-2">Shop now</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="mix-content">
+                <div class="card card-1">
+                    <p>TIME's Best Inventions of 2018</p>
+                </div>
+                <div class="card card-2">
+                    <p>Board Finder Quiz</p>
+                </div>
+                <div class="card card-3">
+                    <p>Compare All Boards</p>
+                </div>
+            </section>
+
+            <section class="mission-statement">
+                <img
+                    src="./images/boosted-stealth-electric-vehicle.jpg"
+                    alt=""
+                />
+                <div class="mission-text">
+                    <h1 class="heading-primary">
+                        Meet your new electric vehicle
+                    </h1>
+                    <hr />
+                    <p>
+                        Boosted is on a mission to make cities feel smaller,
+                        campuses more accessible, and commutes more enjoyable.
+                        Our boards are designed and built to handle the rigors
+                        of daily use while offering an exhilarating ride with
+                        unparalleled power and control.
+                    </p>
+                </div>
+            </section>
+
+            <h3>The New Generation</h3>
+
+            <section class="product-list">
+                <div class="item">
+                    <div class="item-1"></div>
+                    <p class="item-name">Boosted Mini</p>
+                    <p class="item-specs">Where power meets agility</p>
+                </div>
+                <div class="item">
+                    <div class="item-2"></div>
+                    <p class="item-name">Boosted Plus</p>
+                    <p class="item-specs">The new classic</p>
+                </div>
+                <div class="item">
+                    <div class="item-3"></div>
+                    <p class="item-name">Boosted Stealth</p>
+                    <p class="item-specs">The pinnacle of performance</p>
+                </div>
+            </section>
+
+            <section class="promotion-banner">
+                <video class="video-content" autoplay muted loop>
+                    <source src="./video/banner-video.mp4" type="video/mp4" />
+                    Your browser is not supported!
+                </video>
+                <h1>Love getting there</h1>
+            </section>
+
+            <section class="miles-info">
+                <h4>The Original Electric Skateboard</h4>
+                <div class="miles-counter">
+                    <div class="counter count-1">1</div>
+                    <div class="counter count-2">5</div>
+                    <div class="counter count-3">5</div>
+                    <div class="counter count-4">0</div>
+                    <div class="counter count-5">5</div>
+                    <div class="counter count-6">5</div>
+                    <div class="counter count-7">8</div>
+                    <div class="counter count-8">8</div>
+                    <div class="counter count-9">8</div>
+                </div>
+                <h1>Millions of Miles on Boosted Boards</h1>
+            </section>
+
+            <section class="stories">
+                <div class="testimonials">
+                    <div class="testimonial-card card-1">
+                        <div class="name">Jeff H. <i class="fas fa-check-circle"></i></div>
+                        <div class="date">12/28/2018</div>
+                        <div class="address">Hungtington Beach, CA</div>
+                        <div class="rating-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+                        <div class="comment">Awesome Board</div>
+                        <div class="comment-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dolor autem
+                            cupiditate harum necessitatibus, totam libero nesciunt maiores minus. Facilis architecto, obcaecati et quidem
+                            quam eveniet obcaecati et quidem quam ...</div>
+                        <div class="continue-text"><a href="#">Continue Reading &rarr;</a></div>
+                    </div>
+                    <div class="testimonial-card card-2">
+                        <div class="name">Jeff H. <i class="fas fa-check-circle"></i></div>
+                        <div class="date">12/28/2018</div>
+                        <div class="address">Hungtington Beach, CA</div>
+                        <div class="rating-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+                        <div class="comment">Awesome Board</div>
+                        <div class="comment-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dolor autem
+                            cupiditate harum necessitatibus, totam libero nesciunt maiores minus. Facilis architecto, obcaecati et quidem
+                            quam eveniet obcaecati et quidem quam ...</div>
+                        <div class="continue-text"><a href="#">Continue Reading &rarr;</a></div>
+                    </div>
+                    <div class="testimonial-card card-3">
+                        <div class="name">Jeff H. <i class="fas fa-check-circle"></i></div>
+                        <div class="date">12/28/2018</div>
+                        <div class="address">Hungtington Beach, CA</div>
+                        <div class="rating-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+                        <div class="comment">Awesome Board</div>
+                        <div class="comment-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dolor autem
+                            cupiditate harum necessitatibus, totam libero nesciunt maiores minus. Facilis architecto, obcaecati et quidem
+                            quam eveniet obcaecati et quidem quam ...</div>
+                        <div class="continue-text"><a href="#">Continue Reading &rarr;</a></div>
+                    </div>
+                    <div class="testimonial-card card-4">
+                        <div class="name">Jeff H. <i class="fas fa-check-circle"></i></div>
+                        <div class="date">12/28/2018</div>
+                        <div class="address">Hungtington Beach, CA</div>
+                        <div class="rating-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+                        <div class="comment">Awesome Board</div>
+                        <div class="comment-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dolor autem
+                            cupiditate harum necessitatibus, totam libero nesciunt maiores minus. Facilis architecto, obcaecati et quidem
+                            quam eveniet obcaecati et quidem quam ...</div>
+                        <div class="continue-text"><a href="#">Continue Reading &rarr;</a></div>
+                    </div>
+                    <img src="./images/comments-bg.jpg" alt="">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-area">
+                <div class="col col-1">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and Compliance</a></li>
+                        <li><a href="#">Returns and Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="col col-2">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Dealer Locater</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col col-3">
+                    <h4>Order</h4>
+                    <ul>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col col-4">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col col-5">
+                    <div><i class="flag-icon flag-icon-um"></i></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

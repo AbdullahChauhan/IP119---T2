@@ -1,0 +1,736 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+.header {
+    height: 85vh;
+    background-color: rgb(242, 242, 242);
+}
+
+.nav-container {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 2;
+    padding: 16px 24px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.logo-box {
+    width: 7.25rem;
+    margin-right: auto;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.nav-links-mobile ul {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: #222;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+    padding: 0 30px;
+    transform: translateX(100%);
+    font-size: .95rem;
+    transition: all .3s ease-in-out;
+}
+
+.nav-links-mobile li {
+    padding: 16px;
+}
+
+.nav-links-mobile li:not(:nth-child(n + 9)) {
+    border-bottom: 1px solid #666;
+}
+
+.nav-links-mobile li:last-child {
+    padding: 18px;
+}
+
+.nav-links-mobile .social-icons {
+    padding-bottom: 0;
+}
+
+.nav-links-mobile .social-icons a {
+    margin-right: 24px;
+    font-size: 1.75rem;
+    color: #999;
+}
+
+.nav-links-mobile .change-country {
+    letter-spacing: 0;
+    font-size: .9rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+.nav-links-mobile .change-country a i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.nav-links-mobile li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 64px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+/* ******** */
+
+.shopping-box {
+    background-color: rgb(242, 242, 242);
+    padding: 4px;
+    margin-right: 24px;
+}
+
+.shopping-cart-icon {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.shopping-box .shopping-items-count {
+    background-color: #aaa;
+    border-radius: 50%;
+    padding: 8px;
+    color: #fff;
+    font-size: 0.75rem;
+    position: relative;
+    margin-left: 12px;
+}
+
+.count {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.65rem;
+}
+
+.btn {
+    background-color: #f44805;
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.shop-now-btn {
+    display: none;
+}
+
+.nav-hamburger-icon:hover + .nav-links-mobile ul {
+    transform: translateX(0%);
+}
+
+.line {
+    width: 20px;
+    height: 3px;
+    margin-bottom: 4px;
+    background-color: #000;
+    transition: all 0.25s;
+}
+
+.main-banner {
+    position: relative;
+    background-color: steelblue;
+    background-image: url(../images/header-image.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    width: 100%;
+}
+
+.box-center {
+    width: 87.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+}
+
+.box-center img {
+    width: 100%;
+    height: 200px;
+}
+
+main {
+    background-color: rgb(242, 242, 242);
+}
+
+.mix-content {
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.mix-content .card {
+    width: 100%;
+    height: 45vw;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.mix-content .card-1 {
+    background-image: url(../images/card-1.jpg);
+    background-size: cover;
+    background-position: 10% 55%;
+}
+
+.mix-content .card-2 {
+    background-image: url(../images/card-2.jpg);
+    background-size: cover;
+    background-position: 10% 55%;
+}
+
+.mix-content .card-3 {
+    background-image: url(../images/card-3.jpg);
+    background-size: cover;
+    background-position: 10% 55%;
+}
+
+.mix-content .card p {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+.mission-statement img {
+    width: 100%;
+    padding-top: 32px;
+}
+
+.mission-statement .mission-text {
+    padding: 0 22px 22px 22px;
+}
+
+.mission-statement .heading-primary {
+    color: #222;
+    font-family: "Bebas";
+    letter-spacing: 0;
+    font-size: 2.15rem;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.mission-statement hr {
+    border: none;
+    height: 6px;
+    background-color: #f44805;
+    width: 40px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.mission-statement p {
+    color: #444;
+    letter-spacing: 0;
+}
+
+h3 {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.product-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 22px 22px 22px;
+}
+
+.product-list .item {
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+
+.product-list .item-1 {
+    width: 100%;
+    height: 85vw;
+    background-image: url(../images/product-item-1.jpg);
+    background-size: cover;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.product-list .item-2 {
+    width: 100%;
+    height: 85vw;
+    background-image: url(../images/product-item-2.jpg);
+    background-size: cover;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.product-list .item-3 {
+    width: 100%;
+    height: 85vw;
+    background-image: url(../images/product-item-3.jpg);
+    background-size: cover;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.product-list .item-name {
+    margin: 8px 0;
+    text-transform: uppercase;
+    font-family: 'Bebas';
+}
+
+.product-list .item-specs {
+    color: #999;
+    font-size: .8rem;
+}
+
+.promotion-banner {
+    clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 80%);
+    position: relative;
+    margin-top: 48px;
+}
+
+.promotion-banner .video-content {
+    width: 100%;
+}
+
+.promotion-banner h1 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Bebas';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.miles-info {
+    display: grid;
+    grid-template-rows: .3fr 50px 1fr;
+    padding: 48px 22px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 16px;
+    letter-spacing: 2px;
+}
+
+.miles-info .miles-counter {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 4px;
+    background-color: #111;
+    padding: 4px;
+    font-size: 2.5rem;
+    font-family: 'Bebas-Neue';
+}
+
+.miles-info .miles-counter .counter:last-child {
+    background-color: #fff;
+    color: #000;
+}
+
+.miles-info .miles-counter .counter {
+    padding: 4px;
+    background-color: #222;
+    color: #fff;
+}
+
+.miles-info h4 {
+    text-transform: uppercase;
+}
+
+.miles-info h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #222;
+    line-height: 1.25;
+    margin: 0;
+    font-family: 'Bebas-Neue';
+}
+
+.stories {
+    padding: 22px 0;
+}
+
+.stories img {
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    width: 100%;
+}
+
+.stories .testimonials {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.stories .testimonial-card {
+    z-index: 1;
+    padding: 32px;
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 25px 25px 25px 75px 150px 25px;
+}
+
+.stories .card-2, .stories .card-3, .stories .card-4 {
+    display: none;
+}
+
+.testimonial-card .address, .testimonial-card .rating-stars, .testimonial-card .comment, .testimonial-card .comment-desc, .testimonial-card .continue-text {
+    font-size: .75rem;
+    grid-column: 1 / -1;
+}
+
+.testimonial-card .name > i {
+    color: #444111;
+}
+
+.testimonial-card .date {
+    margin-left: auto;
+    font-size: .8rem;
+}
+
+.testimonial-card .rating-stars, .testimonial-card .continue-text {
+    font-size: initial;    
+}
+
+.testimonial-card .comment {
+    margin-top: auto;
+    text-transform: uppercase;
+    font-family: 'Bebas-Neue';
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    text-overflow: ellipsis;
+}
+
+.testimonial-card .comment-desc {
+    color: #777;
+}
+
+.testimonial-card .continue-text a:link, .testimonial-card .continue-text a:visited {
+    text-decoration: none;
+    color: #000;
+    padding: 4px;
+    transition: all .2s;
+    display: inline-block;
+}
+
+.testimonial-card .continue-text > a:hover {
+    background-color: #f44805;
+    color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.testimonial-card .continue-text > a:active {
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+footer {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 425px) {
+    .box-center img {
+        margin-bottom: 24px;
+    }
+
+    .mix-content {
+        padding: 36px;
+        transition: all 0.5s;
+    }
+
+    .mission-statement .mission-text {
+        padding: 0 36px 36px 36px;
+    }
+
+    .product-list {
+        padding: 0 36px 36px 36px;
+    }
+
+    .miles-info {
+        padding: 36px;
+    }
+
+    .miles-info .miles-counter {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .shop-now-btn {
+        display: inline-block;
+        margin-right: 32px;
+    }
+
+    .box-center img {
+        margin-bottom: 32px;
+    }
+
+    .mix-content {
+        flex-direction: row;
+    }
+
+    .mix-content .card {
+        width: 100%;
+        height: 15vw;
+        background-color: #222;
+        position: relative;
+    }
+
+    .mix-content .card:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    .mission-statement .mission-text {
+        padding: 0 36px 36px 36px;
+    }
+
+    .product-list {
+        flex-direction: row;
+    }
+
+    .product-list .item-1, .product-list .item-2, .product-list .item-3 {
+        height: 25vw;
+    }
+
+    .product-list .item:not(:last-child) {
+        margin-right: 32px;
+    }
+
+    .stories .card-2 {
+        display: grid;
+    }
+
+    footer {
+        display: block;
+        transition: all .5s;
+        padding-top: 200px;
+    }
+
+    .footer-area {
+        display: flex;
+        flex-direction: row;
+        padding: 48px;
+        transition: all .5s;
+    }
+
+    .footer-area i {
+        font-size: 1.5rem;
+    }
+
+    .footer-area .col {
+        margin-right: auto;
+    }
+
+    .footer-area .col h4 {
+        text-transform: uppercase;
+        font-family: 'Bebas-Neue';
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    .footer-area .col ul {
+        font-size: .9rem;
+    }
+
+    .footer-area .col a {
+        color: #555;
+    }
+    
+}
+
+@media screen and (min-width: 880px) {
+    footer {
+        padding-top: 250px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo-box {
+        width: 8rem;
+        margin: auto;
+    }
+
+    .nav-links {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .nav-links li {
+        margin-right: 16px;
+    }
+
+    .nav-links li a {
+        padding: 14px 32px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .shop-now-btn {
+        margin-right: auto;
+    }
+
+    .main-banner {
+        background-image: url(../images/header-image2.jpg);
+    }
+
+    .mix-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mix-content .card {
+        width: 100%;
+        height: 20vw;
+        background-color: #222;
+        position: relative;
+    }
+
+    .mission-statement {
+        position: relative;
+        height: 100%;
+    }
+
+    .mission-statement .mission-text {
+        width: 500px;
+        position: absolute;
+        top: 100%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mission-statement hr {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        margin-top: 250px;
+    }
+
+    .product-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .stories .testimonial-card {
+        width: 310px;
+    }
+
+    .stories .card-3 {
+        display: grid;
+    }
+
+    .footer-area {
+        padding: 150px 150px 100px 150px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    footer {
+        padding-top: 325px;
+    }
+
+    .footer-area {
+        padding: 150px 150px 100px 150px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .mix-content, .mission-statement {
+        padding: 36px 128px;
+    }
+
+    .mix-content .card {
+        height: 15vw;
+    }
+
+    .product-list {
+        padding: 0 128px 36px 128px;
+    }
+
+    .stories .testimonial-card {
+        width: 350px;
+    }
+
+    .stories .card-4 {
+        display: grid;
+    }
+
+    footer {
+        padding-top: 400px;
+    }
+
+    .footer-area {
+        padding: 150px 150px 100px 150px;
+    }
+}
