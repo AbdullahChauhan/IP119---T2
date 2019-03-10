@@ -1,3 +1,6 @@
+/* ==================== */
+/* universal styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +9,8 @@
     text-decoration: none;
 }
 
+/* ==================== */
+
 body {
     font-family: "Roboto";
     font-size: 1rem;
@@ -13,21 +18,29 @@ body {
     letter-spacing: 0.05em;
 }
 
-.header {
-    height: 85vh;
+/* ==================== */
+/* header (nav + banner) */
+
+header,
+main,
+footer {
     background-color: rgb(242, 242, 242);
 }
 
+.header {
+    height: 85vh;
+}
+
 .nav-container {
-    align-items: center;
-    display: flex;
     width: 100%;
     height: 80px;
+    display: flex;
+    align-items: center;
     background-color: #fff;
     position: fixed;
     z-index: 2;
     padding: 16px 24px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 .logo-box {
@@ -36,12 +49,17 @@ body {
     transition: all 0.25s ease-in-out;
 }
 
+/* ==================== */
+/* nav-links - only available above 1024px */
+
 .nav-links {
-    list-style: none;
     display: none;
     font-size: 0.9rem;
     font-weight: 600;
 }
+
+/* ==================== */
+/* nav-links for mobiles */
 
 .nav-links-mobile ul {
     position: absolute;
@@ -49,12 +67,12 @@ body {
     left: 0%;
     background-color: #222;
     width: 100%;
-    height: 100vh;
-    list-style: none;
+    height: 95vh;
     padding: 0 30px;
     transform: translateX(100%);
-    font-size: .95rem;
-    transition: all .3s ease-in-out;
+    opacity: 0;
+    font-size: 0.95rem;
+    transition: all 0.5s ease;
 }
 
 .nav-links-mobile li {
@@ -81,7 +99,7 @@ body {
 
 .nav-links-mobile .change-country {
     letter-spacing: 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: #fff;
     font-weight: 300;
 }
@@ -92,7 +110,6 @@ body {
 }
 
 .nav-links-mobile li a {
-    text-decoration: none;
     color: #fff;
     font-weight: 400;
 }
@@ -103,7 +120,6 @@ body {
 }
 
 .nav-links li a {
-    text-decoration: none;
     color: #000;
     transition: all 0.25s ease-in-out;
 }
@@ -112,8 +128,6 @@ body {
     background-color: #eee;
     border-radius: 4px;
 }
-
-/* ******** */
 
 .shopping-box {
     background-color: rgb(242, 242, 242);
@@ -138,8 +152,8 @@ body {
 
 .count {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 55%;
+    top: 45%;
     transform: translate(-50%, -50%);
     font-size: 0.65rem;
 }
@@ -159,9 +173,10 @@ body {
 
 .nav-hamburger-icon:hover + .nav-links-mobile ul {
     transform: translateX(0%);
+    opacity: 1;
 }
 
-.line {
+.nav-hamburger-icon .line {
     width: 20px;
     height: 3px;
     margin-bottom: 4px;
@@ -191,10 +206,7 @@ body {
 .box-center img {
     width: 100%;
     height: 200px;
-}
-
-main {
-    background-color: rgb(242, 242, 242);
+    animation: slideLeft 1s 1s ease-out;
 }
 
 .mix-content {
@@ -295,7 +307,7 @@ h3 {
     height: 85vw;
     background-image: url(../images/product-item-1.jpg);
     background-size: cover;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .product-list .item-2 {
@@ -303,7 +315,7 @@ h3 {
     height: 85vw;
     background-image: url(../images/product-item-2.jpg);
     background-size: cover;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .product-list .item-3 {
@@ -311,18 +323,18 @@ h3 {
     height: 85vw;
     background-image: url(../images/product-item-3.jpg);
     background-size: cover;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .product-list .item-name {
     margin: 8px 0;
     text-transform: uppercase;
-    font-family: 'Bebas';
+    font-family: "Bebas";
 }
 
 .product-list .item-specs {
     color: #999;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 .promotion-banner {
@@ -341,15 +353,16 @@ h3 {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Bebas';
-    top: 50%;
+    font-family: "Bebas";
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 2.75rem;
 }
 
 .miles-info {
     display: grid;
-    grid-template-rows: .3fr 50px 1fr;
+    grid-template-rows: 0.3fr 50px 1fr;
     padding: 48px 22px;
     text-align: center;
     align-items: center;
@@ -365,7 +378,7 @@ h3 {
     background-color: #111;
     padding: 4px;
     font-size: 2.5rem;
-    font-family: 'Bebas-Neue';
+    font-family: "Bebas-Neue";
 }
 
 .miles-info .miles-counter .counter:last-child {
@@ -389,7 +402,7 @@ h3 {
     color: #222;
     line-height: 1.25;
     margin: 0;
-    font-family: 'Bebas-Neue';
+    font-family: "Bebas-Neue";
 }
 
 .stories {
@@ -417,19 +430,25 @@ h3 {
     width: 300px;
     height: 400px;
     background-color: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 25px 25px 25px 75px 150px 25px;
 }
 
-.stories .card-2, .stories .card-3, .stories .card-4 {
+.stories .card-2,
+.stories .card-3,
+.stories .card-4 {
     display: none;
 }
 
-.testimonial-card .address, .testimonial-card .rating-stars, .testimonial-card .comment, .testimonial-card .comment-desc, .testimonial-card .continue-text {
-    font-size: .75rem;
+.testimonial-card .address,
+.testimonial-card .rating-stars,
+.testimonial-card .comment,
+.testimonial-card .comment-desc,
+.testimonial-card .continue-text {
+    font-size: 0.75rem;
     grid-column: 1 / -1;
 }
 
@@ -439,17 +458,18 @@ h3 {
 
 .testimonial-card .date {
     margin-left: auto;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
-.testimonial-card .rating-stars, .testimonial-card .continue-text {
-    font-size: initial;    
+.testimonial-card .rating-stars,
+.testimonial-card .continue-text {
+    font-size: initial;
 }
 
 .testimonial-card .comment {
     margin-top: auto;
     text-transform: uppercase;
-    font-family: 'Bebas-Neue';
+    font-family: "Bebas-Neue";
     font-size: 1.75rem;
     letter-spacing: 2px;
     text-overflow: ellipsis;
@@ -459,23 +479,24 @@ h3 {
     color: #777;
 }
 
-.testimonial-card .continue-text a:link, .testimonial-card .continue-text a:visited {
+.testimonial-card .continue-text a:link,
+.testimonial-card .continue-text a:visited {
     text-decoration: none;
     color: #000;
     padding: 4px;
-    transition: all .2s;
+    transition: all 0.2s;
     display: inline-block;
 }
 
 .testimonial-card .continue-text > a:hover {
     background-color: #f44805;
     color: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 }
 
 .testimonial-card .continue-text > a:active {
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transform: translateY(0);
 }
 
@@ -483,16 +504,27 @@ footer {
     display: none;
 }
 
+/* ==================== */
+/* animations */
 
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
 
+    75% {
+        transform: translateX(10px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-
-
-
-
-
-
+/* ==================== */
+/* media queries */
 
 @media screen and (min-width: 425px) {
     .box-center img {
@@ -523,10 +555,20 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-
     .shop-now-btn {
         display: inline-block;
         margin-right: 32px;
+    }
+
+    .header:hover .main-banner {
+        background-image: linear-gradient(to right, #7ed56fce, #28b485a8),
+            url(../images/boosted-stealth-electric-vehicle.jpg);
+            transform: scale(.95);
+    }
+
+    .main-banner {
+        background-image: url(../images/header-image2.jpg);
+        transition: all 0.5s;
     }
 
     .box-center img {
@@ -556,7 +598,9 @@ footer {
         flex-direction: row;
     }
 
-    .product-list .item-1, .product-list .item-2, .product-list .item-3 {
+    .product-list .item-1,
+    .product-list .item-2,
+    .product-list .item-3 {
         height: 25vw;
     }
 
@@ -570,7 +614,7 @@ footer {
 
     footer {
         display: block;
-        transition: all .5s;
+        transition: all 0.5s;
         padding-top: 200px;
     }
 
@@ -578,7 +622,7 @@ footer {
         display: flex;
         flex-direction: row;
         padding: 48px;
-        transition: all .5s;
+        transition: all 0.5s;
     }
 
     .footer-area i {
@@ -591,19 +635,18 @@ footer {
 
     .footer-area .col h4 {
         text-transform: uppercase;
-        font-family: 'Bebas-Neue';
+        font-family: "Bebas-Neue";
         font-size: 1.5rem;
         font-weight: normal;
     }
 
     .footer-area .col ul {
-        font-size: .9rem;
+        font-size: 0.9rem;
     }
 
     .footer-area .col a {
         color: #555;
     }
-    
 }
 
 @media screen and (min-width: 880px) {
@@ -637,10 +680,6 @@ footer {
 
     .shop-now-btn {
         margin-right: auto;
-    }
-
-    .main-banner {
-        background-image: url(../images/header-image2.jpg);
     }
 
     .mix-content {
@@ -706,7 +745,8 @@ footer {
 }
 
 @media screen and (min-width: 1440px) {
-    .mix-content, .mission-statement {
+    .mix-content,
+    .mission-statement {
         padding: 36px 128px;
     }
 
