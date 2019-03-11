@@ -182,6 +182,7 @@ footer {
     margin-bottom: 4px;
     background-color: #000;
     transition: all 0.25s;
+    border-radius: 4px;
 }
 
 .main-banner {
@@ -338,12 +339,12 @@ h3 {
 }
 
 .promotion-banner {
-    clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 80%);
     position: relative;
     margin-top: 48px;
 }
 
 .promotion-banner .video-content {
+    clip-path: polygon(0 20%, 100% 0%, 100% 95%, 0 80%);
     width: 100%;
 }
 
@@ -357,7 +358,6 @@ h3 {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.75rem;
 }
 
 .miles-info {
@@ -430,7 +430,8 @@ h3 {
     width: 300px;
     height: 400px;
     background-color: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -453,12 +454,16 @@ h3 {
 }
 
 .testimonial-card .name > i {
-    color: #444111;
+    color: #f44805;
 }
 
 .testimonial-card .date {
     margin-left: auto;
     font-size: 0.8rem;
+}
+
+.testimonial-card .address {
+    color: #999;
 }
 
 .testimonial-card .rating-stars,
@@ -536,6 +541,10 @@ footer {
         transition: all 0.5s;
     }
 
+    h3 {
+        font-size: 1.5rem;
+    }
+
     .mission-statement .mission-text {
         padding: 0 36px 36px 36px;
     }
@@ -606,6 +615,10 @@ footer {
 
     .product-list .item:not(:last-child) {
         margin-right: 32px;
+    }
+
+    .promotion-banner h1 {
+        font-size: 2.75rem;
     }
 
     .stories .card-2 {
@@ -694,6 +707,26 @@ footer {
         position: relative;
     }
 
+    .mix-content .card p {
+        transition: all .25s ease-in-out;
+    }
+
+    .mix-content .card-1:hover{
+        background-image: linear-gradient(to right bottom, #7ed56f8c, #28b4858a), url(../images/card-1.jpg);
+    }
+
+    .mix-content .card-2:hover{
+        background-image: linear-gradient(to right bottom, #7ed56f8c, #28b4858a), url(../images/card-2.jpg);
+    }
+
+    .mix-content .card-3:hover{
+        background-image: linear-gradient(to right bottom, #7ed56f8c, #28b4858a), url(../images/card-3.jpg);
+    }
+
+    .mix-content .card:hover p {
+        font-size: 1.5rem;
+    }
+
     .mission-statement {
         position: relative;
         height: 100%;
@@ -721,6 +754,10 @@ footer {
         padding-right: 0;
     }
 
+    .promotion-banner h1 {
+        font-size: 4rem;
+    }
+
     .stories .testimonial-card {
         width: 310px;
     }
@@ -735,6 +772,7 @@ footer {
 }
 
 @media screen and (min-width: 1280px) {
+
     footer {
         padding-top: 325px;
     }
