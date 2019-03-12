@@ -165,6 +165,13 @@ footer {
     padding: 14px 32px;
     font-size: 0.9rem;
     font-weight: bold;
+    transition: all .3s;
+}
+
+.btn:hover {
+    background-color: #f44222;
+    outline-offset: 4px;
+    outline: #f44222 solid 1px;
 }
 
 .shop-now-btn {
